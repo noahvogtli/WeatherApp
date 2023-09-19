@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="backgroundImage">
+        
+        <div style="position: relative;">
+            <form onsubmit="fetchData(); return false;">
+            <input type="text" id="searchbar" placeholder="Search weather for: " class="search">
+            </form>
+            <button class="searchButton" onclick="fetchData()">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 22 20" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z">
+                    </path>
+                    <path d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z">
+                    </path>
+                </svg>
+            </button>
+            <select class="degreeSelect" id="degreeFormat" onchange="fetchData()">
+                <option value="1">Fahrenheit</option>
+                <option value="2">Celsius</option>
+            </select>
+        </div>
+
+
+        
+    </div>
+
+    <div id="outerBox" class="informationBox">
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -8,10 +8,6 @@ function displayWeather(data)
     if (name == undefined) 
     {
         WeatherHeading.classList.add("blankSearch")
-        setTimeout(function() 
-        {
-            alert('Please enter a city')
-        }, 10);
     }
     else
     {
